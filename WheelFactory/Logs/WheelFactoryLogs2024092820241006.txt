@@ -1,0 +1,159 @@
+2024-10-06 19:42:59.083 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-06 19:42:59.480 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-06 19:42:59.580 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-06 19:42:59.581 +05:30 [INF] Hosting environment: Development
+2024-10-06 19:42:59.581 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-06 19:43:00.899 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-06 19:43:01.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 293.9434ms
+2024-10-06 19:43:01.228 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-06 19:43:01.232 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 4.1977ms
+2024-10-06 19:43:01.236 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-06 19:43:01.238 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.3624ms
+2024-10-06 19:43:01.245 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-06 19:43:01.276 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.4729ms
+2024-10-06 19:43:01.598 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-06 19:43:01.608 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/favicon-32x32.png - null null
+2024-10-06 19:43:01.619 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-10-06 19:43:01.619 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/favicon-32x32.png - 200 628 image/png 10.5246ms
+2024-10-06 19:43:01.695 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.4485ms
+2024-10-06 19:51:56.075 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 110
+2024-10-06 19:51:56.088 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:51:56.337 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:51:56.363 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:51:56.678 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-06 19:51:56.697 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 330.8615ms
+2024-10-06 19:51:56.697 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:51:56.698 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 400 null application/problem+json; charset=utf-8 626.7647ms
+2024-10-06 19:52:38.327 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 51
+2024-10-06 19:52:38.337 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:52:38.340 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:52:38.348 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:52:39.373 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1);
+2024-10-06 19:52:39.398 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.User'.
+2024-10-06 19:52:39.399 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 1050.7196ms
+2024-10-06 19:52:39.399 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:52:39.404 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 200 null application/json; charset=utf-8 1076.8171ms
+2024-10-06 19:53:06.571 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 51
+2024-10-06 19:53:06.575 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:53:06.576 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:06.577 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:53:06.622 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1);
+2024-10-06 19:53:06.622 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.User'.
+2024-10-06 19:53:06.623 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 45.9841ms
+2024-10-06 19:53:06.623 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:06.623 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 200 null application/json; charset=utf-8 55.8278ms
+2024-10-06 19:53:07.931 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 51
+2024-10-06 19:53:07.931 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:53:07.931 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:07.931 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:53:07.973 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1);
+2024-10-06 19:53:07.973 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.User'.
+2024-10-06 19:53:07.973 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 42.0425ms
+2024-10-06 19:53:07.973 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:07.973 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 200 null application/json; charset=utf-8 42.7587ms
+2024-10-06 19:53:29.018 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 51
+2024-10-06 19:53:29.019 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:53:29.020 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:29.020 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:53:29.025 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1);
+2024-10-06 19:53:29.025 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.User'.
+2024-10-06 19:53:29.025 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 4.6007ms
+2024-10-06 19:53:29.025 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:29.025 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 200 null application/json; charset=utf-8 7.2664ms
+2024-10-06 19:53:51.916 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 52
+2024-10-06 19:53:51.916 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:53:51.916 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:51.917 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:53:51.932 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-06 19:53:51.932 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 15.4978ms
+2024-10-06 19:53:51.932 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:53:51.932 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 400 null application/problem+json; charset=utf-8 17.6098ms
+2024-10-06 19:54:00.099 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 51
+2024-10-06 19:54:00.099 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:54:00.099 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:54:00.099 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:54:00.107 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1);
+2024-10-06 19:54:00.107 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.User'.
+2024-10-06 19:54:00.107 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 7.9032ms
+2024-10-06 19:54:00.107 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:54:00.107 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 200 null application/json; charset=utf-8 8.3888ms
+2024-10-06 19:54:18.129 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 51
+2024-10-06 19:54:18.129 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:54:18.129 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:54:18.129 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:54:18.141 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [Role])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1);
+2024-10-06 19:54:18.142 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.User'.
+2024-10-06 19:54:18.142 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 13.0497ms
+2024-10-06 19:54:18.142 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:54:18.142 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 200 null application/json; charset=utf-8 13.481ms
+2024-10-06 19:58:06.182 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/User - null null
+2024-10-06 19:58:06.182 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:58:06.186 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/User - 204 null null 4.4817ms
+2024-10-06 19:58:06.192 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/User - application/json 50
+2024-10-06 19:58:06.194 +05:30 [INF] CORS policy execution successful.
+2024-10-06 19:58:06.194 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:58:06.194 +05:30 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WheelFactory.Models.User) on controller WheelFactory.Controllers.UserController (WheelFactory).
+2024-10-06 19:58:06.199 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-10-06 19:58:06.199 +05:30 [INF] Executed action WheelFactory.Controllers.UserController.Post (WheelFactory) in 4.6441ms
+2024-10-06 19:58:06.199 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.UserController.Post (WheelFactory)'
+2024-10-06 19:58:06.199 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/User - 400 null application/problem+json; charset=utf-8 6.6162ms
+2024-10-06 22:59:15.612 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-06 22:59:16.493 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-06 22:59:16.703 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-06 22:59:16.720 +05:30 [INF] Hosting environment: Development
+2024-10-06 22:59:16.721 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-06 22:59:18.791 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-06 22:59:19.264 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 474.3651ms
+2024-10-06 22:59:19.291 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-06 22:59:19.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-06 22:59:19.296 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.6175ms
+2024-10-06 22:59:19.304 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 10.6794ms
+2024-10-06 22:59:19.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-06 22:59:19.441 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 122.3095ms
+2024-10-06 22:59:19.736 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-06 22:59:19.934 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 197.707ms
+2024-10-06 23:00:28.310 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-06 23:00:29.042 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-06 23:00:29.294 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-06 23:00:29.296 +05:30 [INF] Hosting environment: Development
+2024-10-06 23:00:29.302 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-06 23:00:30.883 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-06 23:00:31.491 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 608.7207ms
+2024-10-06 23:00:31.517 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-06 23:00:31.517 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-06 23:00:31.532 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-06 23:00:31.557 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 40.4856ms
+2024-10-06 23:00:31.557 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 40.3217ms
+2024-10-06 23:00:31.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.7198ms
+2024-10-06 23:00:31.787 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-06 23:00:32.003 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 216.5146ms

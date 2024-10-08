@@ -1,0 +1,711 @@
+2024-10-08 09:24:46.347 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-08 09:24:46.849 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-08 09:24:46.921 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-08 09:24:46.922 +05:30 [INF] Hosting environment: Development
+2024-10-08 09:24:46.922 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-08 09:24:48.105 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-08 09:24:48.723 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 635.9154ms
+2024-10-08 09:24:48.747 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-08 09:24:48.747 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-08 09:24:48.750 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-08 09:24:48.763 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 17.4182ms
+2024-10-08 09:24:48.780 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 34.6381ms
+2024-10-08 09:24:48.935 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 187.9059ms
+2024-10-08 09:24:49.025 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-08 09:24:49.439 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 413.5124ms
+2024-10-08 09:37:15.755 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/task/soldering - null null
+2024-10-08 09:37:15.806 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:37:15.810 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/task/soldering - 204 null null 55.9771ms
+2024-10-08 09:37:15.817 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/task/soldering - null null
+2024-10-08 09:37:15.831 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:37:17.412 +05:30 [INF] Microsoft.IdentityModel Version: 8.1.1.0. Date 10/08/2024 04:07:17. PII logging is OFF. See https://aka.ms/IdentityModel/PII for details. 
+IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:37:17.432 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:37:17.441 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:37:17.786 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:37:17.822 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.TaskController.GetOrdersSoldering (WheelFactory)'
+2024-10-08 09:37:17.909 +05:30 [INF] Route matched with {action = "GetOrdersSoldering", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersSoldering(Int32) on controller WheelFactory.Controllers.TaskController (WheelFactory).
+2024-10-08 09:37:22.581 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] IN (N'Soldering', N'Redo')
+2024-10-08 09:37:22.878 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:37:22.957 +05:30 [INF] Executed action WheelFactory.Controllers.TaskController.GetOrdersSoldering (WheelFactory) in 5037.832ms
+2024-10-08 09:37:22.958 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.TaskController.GetOrdersSoldering (WheelFactory)'
+2024-10-08 09:37:22.987 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/task/soldering - 200 null application/json; charset=utf-8 7170.2988ms
+2024-10-08 09:41:13.625 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:41:13.632 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:41:13.635 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 11.5288ms
+2024-10-08 09:41:13.642 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:41:13.648 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:41:13.654 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:41:13.654 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:41:13.654 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:41:13.657 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:41:13.665 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:41:13.671 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:41:13.791 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 09:41:13.794 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:41:13.795 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 123.77ms
+2024-10-08 09:41:13.795 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:41:13.796 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 153.9144ms
+2024-10-08 09:41:13.803 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - null null
+2024-10-08 09:41:13.804 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:41:13.804 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - 204 null null 1.4574ms
+2024-10-08 09:41:13.807 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/completed - null null
+2024-10-08 09:41:13.807 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:41:13.814 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:41:13.814 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:41:13.815 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:41:13.815 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:41:13.818 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 09:41:13.823 +05:30 [INF] Route matched with {action = "GetCompletedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompletedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:41:14.129 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'completed'
+2024-10-08 09:41:14.131 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:41:14.132 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory) in 309.1285ms
+2024-10-08 09:41:14.132 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 09:41:14.133 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/completed - 200 null application/json; charset=utf-8 326.2422ms
+2024-10-08 09:41:14.139 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 09:41:14.140 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:41:14.140 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - 204 null null 0.947ms
+2024-10-08 09:41:14.143 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 09:41:14.143 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:41:14.144 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:41:14.145 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:41:14.145 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:41:14.145 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:41:14.146 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 09:41:14.149 +05:30 [INF] Route matched with {action = "GetScrapedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetScrapedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:41:14.166 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Scrap'
+2024-10-08 09:41:14.167 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:41:14.168 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory) in 17.9628ms
+2024-10-08 09:41:14.168 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 09:41:14.168 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - 200 null application/json; charset=utf-8 25.4942ms
+2024-10-08 09:42:46.793 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/Inventory - null null
+2024-10-08 09:42:46.801 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:42:46.804 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/Inventory - 204 null null 11.0883ms
+2024-10-08 09:42:46.811 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/Inventory - null null
+2024-10-08 09:42:46.812 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:42:46.815 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:42:46.816 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:42:46.818 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:42:46.818 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:42:46.819 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory)'
+2024-10-08 09:42:46.832 +05:30 [INF] Route matched with {action = "GetOrdersInventory", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersInventory() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:42:46.872 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'neworder'
+2024-10-08 09:42:46.873 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:42:46.873 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory) in 41.4412ms
+2024-10-08 09:42:46.873 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory)'
+2024-10-08 09:42:46.874 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/Inventory - 200 null application/json; charset=utf-8 62.5048ms
+2024-10-08 09:44:20.375 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/task/painting - null null
+2024-10-08 09:44:20.379 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:44:20.380 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/task/painting - 204 null null 7.8441ms
+2024-10-08 09:44:20.395 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/task/painting - null null
+2024-10-08 09:44:20.396 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:44:20.397 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:44:20.397 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:44:20.398 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:44:20.398 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:44:20.399 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.TaskController.GetOrdersPainting (WheelFactory)'
+2024-10-08 09:44:20.402 +05:30 [INF] Route matched with {action = "GetOrdersPainting", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersPainting() on controller WheelFactory.Controllers.TaskController (WheelFactory).
+2024-10-08 09:44:20.495 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Painting'
+2024-10-08 09:44:20.496 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:44:20.496 +05:30 [INF] Executed action WheelFactory.Controllers.TaskController.GetOrdersPainting (WheelFactory) in 94.0219ms
+2024-10-08 09:44:20.497 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.TaskController.GetOrdersPainting (WheelFactory)'
+2024-10-08 09:44:20.497 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/task/painting - 200 null application/json; charset=utf-8 101.7647ms
+2024-10-08 09:45:41.715 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:45:41.715 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:45:41.716 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 0.8399ms
+2024-10-08 09:45:41.743 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:45:41.744 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:45:41.748 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:45:41.749 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:45:41.749 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:45:41.749 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:45:41.750 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:45:41.751 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:45:41.806 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 09:45:41.807 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:45:41.808 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 56.8896ms
+2024-10-08 09:45:41.808 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:45:41.808 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 65.0804ms
+2024-10-08 09:45:41.814 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - null null
+2024-10-08 09:45:41.815 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:45:41.815 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - 204 null null 0.9848ms
+2024-10-08 09:45:41.817 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/completed - null null
+2024-10-08 09:45:41.818 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:45:41.819 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:45:41.819 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:45:41.819 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:45:41.819 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:45:41.820 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 09:45:41.820 +05:30 [INF] Route matched with {action = "GetCompletedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompletedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:45:41.826 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'completed'
+2024-10-08 09:45:41.827 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:45:41.827 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory) in 7.4209ms
+2024-10-08 09:45:41.827 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 09:45:41.828 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/completed - 200 null application/json; charset=utf-8 10.498ms
+2024-10-08 09:45:41.832 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 09:45:41.833 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:45:41.833 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - 204 null null 0.7654ms
+2024-10-08 09:45:41.835 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 09:45:41.836 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:45:41.837 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:45:41.837 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:45:41.837 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:45:41.837 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:45:41.838 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 09:45:41.838 +05:30 [INF] Route matched with {action = "GetScrapedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetScrapedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:45:41.842 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Scrap'
+2024-10-08 09:45:41.843 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:45:41.844 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory) in 5.4966ms
+2024-10-08 09:45:41.844 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 09:45:41.844 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - 200 null application/json; charset=utf-8 8.8405ms
+2024-10-08 09:46:15.303 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:46:15.303 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:15.304 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 1.4906ms
+2024-10-08 09:46:15.307 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:46:15.308 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:15.312 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:46:15.312 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:46:15.313 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:46:15.313 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:46:15.313 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:46:15.313 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:46:15.327 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 09:46:15.332 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:46:15.332 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 18.8984ms
+2024-10-08 09:46:15.332 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:46:15.333 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 25.4523ms
+2024-10-08 09:46:15.340 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - null null
+2024-10-08 09:46:15.340 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:15.340 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - 204 null null 0.881ms
+2024-10-08 09:46:15.343 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/completed - null null
+2024-10-08 09:46:15.344 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:15.345 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:46:15.345 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:46:15.345 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:46:15.345 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:46:15.346 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 09:46:15.346 +05:30 [INF] Route matched with {action = "GetCompletedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompletedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:46:15.350 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'completed'
+2024-10-08 09:46:15.351 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:46:15.352 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory) in 5.681ms
+2024-10-08 09:46:15.352 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 09:46:15.352 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/completed - 200 null application/json; charset=utf-8 8.9879ms
+2024-10-08 09:46:15.359 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 09:46:15.359 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:15.359 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - 204 null null 1.0192ms
+2024-10-08 09:46:15.362 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 09:46:15.363 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:15.365 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:46:15.365 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:46:15.365 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:46:15.365 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:46:15.365 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 09:46:15.366 +05:30 [INF] Route matched with {action = "GetScrapedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetScrapedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:46:15.369 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Scrap'
+2024-10-08 09:46:15.370 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:46:15.371 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory) in 4.8782ms
+2024-10-08 09:46:15.371 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 09:46:15.371 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - 200 null application/json; charset=utf-8 8.6008ms
+2024-10-08 09:46:51.320 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders - null null
+2024-10-08 09:46:51.321 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:51.321 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders - 204 null null 0.9093ms
+2024-10-08 09:46:51.330 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5041/api/Orders - multipart/form-data; boundary=----WebKitFormBoundaryefMvA52WaAmql5Ls 29573
+2024-10-08 09:46:51.331 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:51.332 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:46:51.332 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:46:51.332 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:46:51.332 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:46:51.333 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.Post (WheelFactory)'
+2024-10-08 09:46:51.353 +05:30 [INF] Route matched with {action = "Post", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(WheelFactory.Models.OrderDTO) on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:46:51.926 +05:30 [INF] Executed DbCommand (123ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [OrderDetails] ([ClientName], [CreatedAt], [DamageType], [ImageUrl], [Make], [Model], [Notes], [Status], [Year])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [OrderId]
+FROM [OrderDetails]
+WHERE @@ROWCOUNT = 1 AND [OrderId] = scope_identity();
+2024-10-08 09:46:51.996 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.Orders'.
+2024-10-08 09:46:51.998 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.Post (WheelFactory) in 644.9932ms
+2024-10-08 09:46:51.999 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.Post (WheelFactory)'
+2024-10-08 09:46:52.001 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5041/api/Orders - 200 null application/json; charset=utf-8 671.2344ms
+2024-10-08 09:46:52.004 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:46:52.005 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:52.005 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 1.2588ms
+2024-10-08 09:46:52.008 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 09:46:52.008 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:46:52.010 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:46:52.010 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:46:52.010 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:46:52.010 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:46:52.011 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:46:52.011 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:46:52.018 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 09:46:52.019 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:46:52.019 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 8.3729ms
+2024-10-08 09:46:52.020 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 09:46:52.020 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 11.8952ms
+2024-10-08 09:47:20.102 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/Inventory - null null
+2024-10-08 09:47:20.102 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:47:20.103 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/Inventory - 204 null null 1.327ms
+2024-10-08 09:47:20.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/Inventory - null null
+2024-10-08 09:47:20.114 +05:30 [INF] CORS policy execution successful.
+2024-10-08 09:47:20.120 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 09:47:20.120 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 09:47:20.120 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 09:47:20.126 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 09:47:20.129 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory)'
+2024-10-08 09:47:20.130 +05:30 [INF] Route matched with {action = "GetOrdersInventory", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersInventory() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 09:47:20.152 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'neworder'
+2024-10-08 09:47:20.153 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 09:47:20.153 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory) in 23.5393ms
+2024-10-08 09:47:20.154 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory)'
+2024-10-08 09:47:20.154 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/Inventory - 200 null application/json; charset=utf-8 40.8249ms
+2024-10-08 10:07:56.820 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-08 10:07:57.013 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-08 10:07:57.116 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-08 10:07:57.117 +05:30 [INF] Hosting environment: Development
+2024-10-08 10:07:57.117 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-08 10:07:57.833 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-08 10:07:58.097 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 272.0978ms
+2024-10-08 10:07:58.116 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-08 10:07:58.116 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-08 10:07:58.118 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-08 10:07:58.119 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 3.4625ms
+2024-10-08 10:07:58.120 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.2444ms
+2024-10-08 10:07:58.161 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.3951ms
+2024-10-08 10:07:58.205 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-08 10:07:58.290 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.9417ms
+2024-10-08 14:35:43.055 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-08 14:35:43.406 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-08 14:35:43.507 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-08 14:35:43.508 +05:30 [INF] Hosting environment: Development
+2024-10-08 14:35:43.508 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-08 14:35:44.351 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-08 14:35:45.351 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 1022.9052ms
+2024-10-08 14:35:45.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/swagger-ui.css - null null
+2024-10-08 14:35:45.407 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.css - null null
+2024-10-08 14:35:45.415 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/swagger-ui-bundle.js - null null
+2024-10-08 14:35:45.422 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-08 14:35:45.434 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/swagger-ui-standalone-preset.js - null null
+2024-10-08 14:35:45.451 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2024-10-08 14:35:45.451 +05:30 [INF] The file /swagger-ui.css was not modified
+2024-10-08 14:35:45.451 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-10-08 14:35:45.451 +05:30 [INF] The file /index.css was not modified
+2024-10-08 14:35:45.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/swagger-ui-bundle.js - 304 null text/javascript 42.7234ms
+2024-10-08 14:35:45.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 23.7187ms
+2024-10-08 14:35:45.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.css - 304 null text/css 50.4637ms
+2024-10-08 14:35:45.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/swagger-ui.css - 304 null text/css 61.3682ms
+2024-10-08 14:35:45.461 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-08 14:35:45.464 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 49.4879ms
+2024-10-08 14:35:45.470 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 11.4648ms
+2024-10-08 14:35:45.481 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-08 14:35:45.657 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 175.2617ms
+2024-10-08 14:35:47.375 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-08 14:35:47.828 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 452.9246ms
+2024-10-08 14:36:05.711 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders - null null
+2024-10-08 14:36:06.362 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-10-08 14:36:06.378 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-10-08 14:36:06.379 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders - 401 0 null 668.5157ms
+2024-10-08 14:36:50.054 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 14:36:50.071 +05:30 [INF] CORS policy execution successful.
+2024-10-08 14:36:50.075 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 21.0636ms
+2024-10-08 14:36:50.080 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 14:36:50.085 +05:30 [INF] CORS policy execution successful.
+2024-10-08 14:36:51.184 +05:30 [INF] Microsoft.IdentityModel Version: 8.1.1.0. Date 10/08/2024 09:06:51. PII logging is OFF. See https://aka.ms/IdentityModel/PII for details. 
+IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 14:36:51.210 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 14:36:51.224 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 14:36:51.816 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:36:51.843 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 14:36:51.913 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 14:36:57.068 +05:30 [INF] Executed DbCommand (107ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 14:36:57.413 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 14:36:57.484 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 5560.3774ms
+2024-10-08 14:36:57.485 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 14:36:57.509 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 7435.2561ms
+2024-10-08 14:36:57.510 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - null null
+2024-10-08 14:36:57.511 +05:30 [INF] CORS policy execution successful.
+2024-10-08 14:36:57.511 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - 204 null null 1.0633ms
+2024-10-08 14:36:57.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/completed - null null
+2024-10-08 14:36:57.516 +05:30 [INF] CORS policy execution successful.
+2024-10-08 14:36:57.519 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 14:36:57.519 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 14:36:57.519 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 14:36:57.521 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:36:57.526 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 14:36:57.532 +05:30 [INF] Route matched with {action = "GetCompletedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompletedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 14:36:57.608 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'completed'
+2024-10-08 14:36:57.611 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 14:36:57.611 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory) in 79.5949ms
+2024-10-08 14:36:57.612 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 14:36:57.612 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/completed - 200 null application/json; charset=utf-8 97.1745ms
+2024-10-08 14:36:57.620 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 14:36:57.620 +05:30 [INF] CORS policy execution successful.
+2024-10-08 14:36:57.620 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - 204 null null 0.8361ms
+2024-10-08 14:36:57.623 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 14:36:57.624 +05:30 [INF] CORS policy execution successful.
+2024-10-08 14:36:57.626 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 14:36:57.626 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 14:36:57.626 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 14:36:57.626 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:36:57.627 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 14:36:57.631 +05:30 [INF] Route matched with {action = "GetScrapedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetScrapedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 14:36:57.856 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Scrap'
+2024-10-08 14:36:57.858 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 14:36:57.858 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory) in 226.9212ms
+2024-10-08 14:36:57.858 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 14:36:57.859 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - 200 null application/json; charset=utf-8 235.4769ms
+2024-10-08 14:37:18.968 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders
+ - null null
+2024-10-08 14:37:18.970 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 14:37:18.971 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 14:37:18.971 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 14:37:18.975 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:37:18.976 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders
+ - 404 0 null 24.9823ms
+2024-10-08 14:37:18.979 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5041/api/Orders%0A, Response status code: 404
+2024-10-08 14:37:33.136 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders
+ - null null
+2024-10-08 14:37:33.138 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 14:37:33.138 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 14:37:33.138 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 14:37:33.138 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:37:33.139 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders
+ - 404 0 null 3.4849ms
+2024-10-08 14:37:33.140 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5041/api/Orders%0A, Response status code: 404
+2024-10-08 14:38:04.545 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders
+ - null null
+2024-10-08 14:38:04.569 +05:30 [INF] IDX10264: Reading issuer signing keys from validation parameters and configuration.
+2024-10-08 14:38:04.569 +05:30 [INF] IDX10265: Reading issuer signing keys from configuration.
+2024-10-08 14:38:04.571 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.X509SecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.572 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.RsaSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.572 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.X509SecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.572 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.RsaSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.572 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.X509SecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.573 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.RsaSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.573 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.X509SecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.573 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.RsaSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.574 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.X509SecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.574 +05:30 [INF] IDX14000: Signature validation of this JWT is not supported for: Algorithm: 'HS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.RsaSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:04.574 +05:30 [INF] IDX10243: Reading issuer signing keys from validation parameters.
+2024-10-08 14:38:04.575 +05:30 [INF] IDX10243: Reading issuer signing keys from validation parameters.
+2024-10-08 14:38:04.575 +05:30 [INF] IDX10265: Reading issuer signing keys from configuration.
+2024-10-08 14:38:04.577 +05:30 [ERR] IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s', InternalId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s'. , KeyId: ikjwRrjZPR58a_wQxUzpzGuUN4s
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s', InternalId: 'TrZ4CdY35hHWCUJCRD8b0_Ysj5ehaZXOUf-XKccyYjo'. , KeyId: ikjwRrjZPR58a_wQxUzpzGuUN4s
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko', InternalId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko'. , KeyId: Mc7l3Iz93g7uwgNeEmmw_WYGPko
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko', InternalId: 'DqWOdqdf7VAQ6-npj7kqZ_9SCRRTe58_Om4Hk3rwVrI'. , KeyId: Mc7l3Iz93g7uwgNeEmmw_WYGPko
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'iw1BXXcybk07kmtIeeJeIYqas18', InternalId: 'iw1BXXcybk07kmtIeeJeIYqas18'. , KeyId: iw1BXXcybk07kmtIeeJeIYqas18
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'iw1BXXcybk07kmtIeeJeIYqas18', InternalId: 'G3L5HyyvQtTFyTbZM-8S8XBji6KYWwb1MapLKwfOB0I'. , KeyId: iw1BXXcybk07kmtIeeJeIYqas18
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0', InternalId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0'. , KeyId: 3PaK4EfyBNQu3CtjYsa3YmhQ5E0
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0', InternalId: 'G36ByiBJf4FJyQI0G2iTJebA9eVA_l0U0CWxNSjOgGg'. , KeyId: 3PaK4EfyBNQu3CtjYsa3YmhQ5E0
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: '8PXQDb4mOmolu_BtG3jDX4qR2xU', InternalId: '8PXQDb4mOmolu_BtG3jDX4qR2xU'. , KeyId: 8PXQDb4mOmolu_BtG3jDX4qR2xU
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: '8PXQDb4mOmolu_BtG3jDX4qR2xU', InternalId: 'Y9TiEOGCHMYYBoKWKojbYLADMaxeI2nD86zcienknro'. , KeyId: 8PXQDb4mOmolu_BtG3jDX4qR2xU
+'. Number of keys in TokenValidationParameters: '0'. 
+Number of keys in Configuration: '10'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-10-08 14:38:04.591 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s', InternalId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s'. , KeyId: ikjwRrjZPR58a_wQxUzpzGuUN4s
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s', InternalId: 'TrZ4CdY35hHWCUJCRD8b0_Ysj5ehaZXOUf-XKccyYjo'. , KeyId: ikjwRrjZPR58a_wQxUzpzGuUN4s
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko', InternalId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko'. , KeyId: Mc7l3Iz93g7uwgNeEmmw_WYGPko
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko', InternalId: 'DqWOdqdf7VAQ6-npj7kqZ_9SCRRTe58_Om4Hk3rwVrI'. , KeyId: Mc7l3Iz93g7uwgNeEmmw_WYGPko
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'iw1BXXcybk07kmtIeeJeIYqas18', InternalId: 'iw1BXXcybk07kmtIeeJeIYqas18'. , KeyId: iw1BXXcybk07kmtIeeJeIYqas18
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'iw1BXXcybk07kmtIeeJeIYqas18', InternalId: 'G3L5HyyvQtTFyTbZM-8S8XBji6KYWwb1MapLKwfOB0I'. , KeyId: iw1BXXcybk07kmtIeeJeIYqas18
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0', InternalId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0'. , KeyId: 3PaK4EfyBNQu3CtjYsa3YmhQ5E0
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0', InternalId: 'G36ByiBJf4FJyQI0G2iTJebA9eVA_l0U0CWxNSjOgGg'. , KeyId: 3PaK4EfyBNQu3CtjYsa3YmhQ5E0
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: '8PXQDb4mOmolu_BtG3jDX4qR2xU', InternalId: '8PXQDb4mOmolu_BtG3jDX4qR2xU'. , KeyId: 8PXQDb4mOmolu_BtG3jDX4qR2xU
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: '8PXQDb4mOmolu_BtG3jDX4qR2xU', InternalId: 'Y9TiEOGCHMYYBoKWKojbYLADMaxeI2nD86zcienknro'. , KeyId: 8PXQDb4mOmolu_BtG3jDX4qR2xU
+'. Number of keys in TokenValidationParameters: '0'. 
+Number of keys in Configuration: '10'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-10-08 14:38:04.746 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s', InternalId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s'. , KeyId: ikjwRrjZPR58a_wQxUzpzGuUN4s
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'ikjwRrjZPR58a_wQxUzpzGuUN4s', InternalId: 'TrZ4CdY35hHWCUJCRD8b0_Ysj5ehaZXOUf-XKccyYjo'. , KeyId: ikjwRrjZPR58a_wQxUzpzGuUN4s
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko', InternalId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko'. , KeyId: Mc7l3Iz93g7uwgNeEmmw_WYGPko
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'Mc7l3Iz93g7uwgNeEmmw_WYGPko', InternalId: 'DqWOdqdf7VAQ6-npj7kqZ_9SCRRTe58_Om4Hk3rwVrI'. , KeyId: Mc7l3Iz93g7uwgNeEmmw_WYGPko
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: 'iw1BXXcybk07kmtIeeJeIYqas18', InternalId: 'iw1BXXcybk07kmtIeeJeIYqas18'. , KeyId: iw1BXXcybk07kmtIeeJeIYqas18
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: 'iw1BXXcybk07kmtIeeJeIYqas18', InternalId: 'G3L5HyyvQtTFyTbZM-8S8XBji6KYWwb1MapLKwfOB0I'. , KeyId: iw1BXXcybk07kmtIeeJeIYqas18
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0', InternalId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0'. , KeyId: 3PaK4EfyBNQu3CtjYsa3YmhQ5E0
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: '3PaK4EfyBNQu3CtjYsa3YmhQ5E0', InternalId: 'G36ByiBJf4FJyQI0G2iTJebA9eVA_l0U0CWxNSjOgGg'. , KeyId: 3PaK4EfyBNQu3CtjYsa3YmhQ5E0
+Microsoft.IdentityModel.Tokens.X509SecurityKey, KeyId: '8PXQDb4mOmolu_BtG3jDX4qR2xU', InternalId: '8PXQDb4mOmolu_BtG3jDX4qR2xU'. , KeyId: 8PXQDb4mOmolu_BtG3jDX4qR2xU
+Microsoft.IdentityModel.Tokens.RsaSecurityKey, KeyId: '8PXQDb4mOmolu_BtG3jDX4qR2xU', InternalId: 'Y9TiEOGCHMYYBoKWKojbYLADMaxeI2nD86zcienknro'. , KeyId: 8PXQDb4mOmolu_BtG3jDX4qR2xU
+'. Number of keys in TokenValidationParameters: '0'. 
+Number of keys in Configuration: '10'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-10-08 14:38:04.746 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders
+ - 404 0 null 200.7887ms
+2024-10-08 14:38:04.746 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5041/api/Orders%0A, Response status code: 404
+2024-10-08 14:38:23.820 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders
+ - null null
+2024-10-08 14:38:23.822 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 14:38:23.822 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 14:38:23.822 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 14:38:23.823 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 14:38:23.823 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders
+ - 404 0 null 3.2696ms
+2024-10-08 14:38:23.824 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5041/api/Orders%0A, Response status code: 404
+2024-10-08 16:26:51.447 +05:30 [INF] User profile is available. Using 'C:\Users\tmadhushalini\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-08 16:26:52.014 +05:30 [INF] Now listening on: http://localhost:5041
+2024-10-08 16:26:52.105 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-08 16:26:52.106 +05:30 [INF] Hosting environment: Development
+2024-10-08 16:26:52.106 +05:30 [INF] Content root path: C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory
+2024-10-08 16:26:53.062 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.html - null null
+2024-10-08 16:26:53.636 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.html - 200 null text/html;charset=utf-8 587.1789ms
+2024-10-08 16:26:53.720 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-08 16:26:53.729 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/index.js - null null
+2024-10-08 16:26:53.749 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/_vs/browserLink - null null
+2024-10-08 16:26:53.755 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 35.7965ms
+2024-10-08 16:26:53.770 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/index.js - 200 null application/javascript;charset=utf-8 41.4165ms
+2024-10-08 16:26:53.873 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.1934ms
+2024-10-08 16:26:54.205 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - null null
+2024-10-08 16:26:54.475 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 269.4342ms
+2024-10-08 16:27:28.225 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 16:27:28.267 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:28.272 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 46.2667ms
+2024-10-08 16:27:28.279 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 16:27:28.291 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:29.825 +05:30 [INF] Microsoft.IdentityModel Version: 8.1.1.0. Date 10/08/2024 10:57:29. PII logging is OFF. See https://aka.ms/IdentityModel/PII for details. 
+IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:27:29.855 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:27:29.869 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:27:30.449 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:27:30.495 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 16:27:30.551 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:27:35.312 +05:30 [INF] Executed DbCommand (115ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 16:27:35.653 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:27:35.729 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 5167.6886ms
+2024-10-08 16:27:35.730 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 16:27:35.757 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 7478.3838ms
+2024-10-08 16:27:35.758 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - null null
+2024-10-08 16:27:35.766 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:35.766 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - 204 null null 8.6836ms
+2024-10-08 16:27:35.770 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/completed - null null
+2024-10-08 16:27:35.771 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:35.779 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:27:35.780 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:27:35.784 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:27:35.786 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:27:35.793 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 16:27:35.798 +05:30 [INF] Route matched with {action = "GetCompletedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompletedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:27:35.893 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'completed'
+2024-10-08 16:27:35.896 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:27:35.897 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory) in 98.2042ms
+2024-10-08 16:27:35.897 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 16:27:35.897 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/completed - 200 null application/json; charset=utf-8 128.3091ms
+2024-10-08 16:27:35.903 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 16:27:35.903 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:35.904 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - 204 null null 0.6117ms
+2024-10-08 16:27:35.906 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 16:27:35.906 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:35.910 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:27:35.910 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:27:35.911 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:27:35.911 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:27:35.913 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 16:27:35.915 +05:30 [INF] Route matched with {action = "GetScrapedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetScrapedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:27:36.153 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Scrap'
+2024-10-08 16:27:36.154 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:27:36.155 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory) in 239.9339ms
+2024-10-08 16:27:36.155 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 16:27:36.156 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - 200 null application/json; charset=utf-8 249.8544ms
+2024-10-08 16:27:59.205 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/Inventory - null null
+2024-10-08 16:27:59.209 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:59.210 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/Inventory - 204 null null 5.543ms
+2024-10-08 16:27:59.223 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/Inventory - null null
+2024-10-08 16:27:59.224 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:27:59.229 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:27:59.229 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:27:59.229 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:27:59.229 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:27:59.230 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory)'
+2024-10-08 16:27:59.235 +05:30 [INF] Route matched with {action = "GetOrdersInventory", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersInventory() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:27:59.254 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'neworder'
+2024-10-08 16:27:59.256 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:27:59.256 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory) in 20.6676ms
+2024-10-08 16:27:59.256 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetOrdersInventory (WheelFactory)'
+2024-10-08 16:27:59.257 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/Inventory - 200 null application/json; charset=utf-8 33.9347ms
+2024-10-08 16:28:03.286 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/14 - null null
+2024-10-08 16:28:03.287 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:28:03.288 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/14 - 204 null null 1.9869ms
+2024-10-08 16:28:03.290 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/14 - null null
+2024-10-08 16:28:03.291 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:28:03.293 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:28:03.293 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:28:03.293 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:28:03.294 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:28:03.295 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.Get (WheelFactory)'
+2024-10-08 16:28:03.321 +05:30 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:28:03.575 +05:30 [INF] Executed DbCommand (100ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__p_0
+2024-10-08 16:28:03.578 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.Orders'.
+2024-10-08 16:28:03.579 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.Get (WheelFactory) in 257.9996ms
+2024-10-08 16:28:03.580 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.Get (WheelFactory)'
+2024-10-08 16:28:03.580 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/14 - 200 null application/json; charset=utf-8 289.8296ms
+2024-10-08 16:28:03.590 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/images/Inventory.jpg - null null
+2024-10-08 16:28:03.708 +05:30 [INF] Sending file. Request path: '/images/Inventory.jpg'. Physical path: 'C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory\wwwroot\images\Inventory.jpg'
+2024-10-08 16:28:03.709 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/images/Inventory.jpg - 200 28684 image/jpeg 119.4672ms
+2024-10-08 16:28:08.398 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/14 - null null
+2024-10-08 16:28:08.399 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:28:08.399 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/14 - 204 null null 0.7589ms
+2024-10-08 16:28:08.401 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/14 - null null
+2024-10-08 16:28:08.402 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:28:08.402 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:28:08.403 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:28:08.403 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:28:08.403 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:28:08.404 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.Get (WheelFactory)'
+2024-10-08 16:28:08.404 +05:30 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:28:08.440 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__p_0
+2024-10-08 16:28:08.441 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.Orders'.
+2024-10-08 16:28:08.442 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.Get (WheelFactory) in 36.9782ms
+2024-10-08 16:28:08.442 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.Get (WheelFactory)'
+2024-10-08 16:28:08.442 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/14 - 200 null application/json; charset=utf-8 40.8213ms
+2024-10-08 16:28:09.955 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/14 - null null
+2024-10-08 16:28:09.956 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:28:09.956 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:28:09.957 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:28:09.957 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:28:09.957 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:28:09.957 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.Get (WheelFactory)'
+2024-10-08 16:28:09.958 +05:30 [INF] Route matched with {action = "Get", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:28:09.963 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__p_0
+2024-10-08 16:28:09.963 +05:30 [INF] Executing OkObjectResult, writing value of type 'WheelFactory.Models.Orders'.
+2024-10-08 16:28:09.963 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.Get (WheelFactory) in 5.7471ms
+2024-10-08 16:28:09.964 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.Get (WheelFactory)'
+2024-10-08 16:28:09.964 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/14 - 200 null application/json; charset=utf-8 8.6617ms
+2024-10-08 16:33:12.879 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - null null
+2024-10-08 16:33:12.879 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:33:12.880 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/current - 204 null null 0.8284ms
+2024-10-08 16:33:12.884 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/current - null null
+2024-10-08 16:33:12.884 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:33:12.885 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:33:12.885 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:33:12.885 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:33:12.885 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:33:12.886 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 16:33:12.886 +05:30 [INF] Route matched with {action = "GetCurrentOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCurrentOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:33:12.929 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] NOT IN (N'completed', N'Scrap')
+2024-10-08 16:33:12.931 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:33:12.931 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory) in 45.4658ms
+2024-10-08 16:33:12.931 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCurrentOrders (WheelFactory)'
+2024-10-08 16:33:12.932 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/current - 200 null application/json; charset=utf-8 47.9717ms
+2024-10-08 16:33:12.939 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - null null
+2024-10-08 16:33:12.939 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:33:12.940 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/completed - 204 null null 0.867ms
+2024-10-08 16:33:12.944 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/completed - null null
+2024-10-08 16:33:12.945 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:33:12.946 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:33:12.946 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:33:12.946 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:33:12.946 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:33:12.947 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 16:33:12.947 +05:30 [INF] Route matched with {action = "GetCompletedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCompletedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:33:12.956 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'completed'
+2024-10-08 16:33:12.957 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:33:12.958 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory) in 10.5787ms
+2024-10-08 16:33:12.958 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetCompletedOrders (WheelFactory)'
+2024-10-08 16:33:12.958 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/completed - 200 null application/json; charset=utf-8 13.6835ms
+2024-10-08 16:33:12.965 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 16:33:12.965 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:33:12.966 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5041/api/Orders/scraped - 204 null null 0.7814ms
+2024-10-08 16:33:12.969 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - null null
+2024-10-08 16:33:12.970 +05:30 [INF] CORS policy execution successful.
+2024-10-08 16:33:12.971 +05:30 [INF] IDX10242: Security token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' has a valid signature.
+2024-10-08 16:33:12.971 +05:30 [INF] IDX10239: Lifetime of the token is valid.
+2024-10-08 16:33:12.971 +05:30 [INF] IDX10234: Audience Validated.Audience: '95b1f998-ee4c-4af5-bdba-bc028bb89fbf'
+2024-10-08 16:33:12.971 +05:30 [INF] IDX10245: Creating claims identity from the validated token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-10-08 16:33:12.971 +05:30 [INF] Executing endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 16:33:12.972 +05:30 [INF] Route matched with {action = "GetScrapedOrders", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetScrapedOrders() on controller WheelFactory.Controllers.OrdersController (WheelFactory).
+2024-10-08 16:33:12.977 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[ClientName], [o].[CreatedAt], [o].[DamageType], [o].[ImageUrl], [o].[Make], [o].[Model], [o].[Notes], [o].[Status], [o].[Year]
+FROM [OrderDetails] AS [o]
+WHERE [o].[Status] = N'Scrap'
+2024-10-08 16:33:12.978 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WheelFactory.Models.Orders, WheelFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-10-08 16:33:12.978 +05:30 [INF] Executed action WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory) in 6.6075ms
+2024-10-08 16:33:12.978 +05:30 [INF] Executed endpoint 'WheelFactory.Controllers.OrdersController.GetScrapedOrders (WheelFactory)'
+2024-10-08 16:33:12.979 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5041/api/Orders/scraped - 200 null application/json; charset=utf-8 9.853ms
