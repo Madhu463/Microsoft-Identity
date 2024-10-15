@@ -18,50 +18,7 @@
 // };
 
 // export default ProtectedRoute;
-// import React, { useEffect, useState } from 'react';
-// import { Navigate, Outlet } from 'react-router-dom';
-// import { useMsal } from '@azure/msal-react';
 
-// const ProtectedRoute = () => {
-//     const [isAuthenticated, setIsAuthenticated] = useState(null);
-//     const { instance } = useMsal();
-
-//     useEffect(() => {
-//         try {
-//             const accounts = instance.getAllAccounts();
-//             console.log('Accounts:', accounts);
-//             setIsAuthenticated(accounts.length > 0);
-//         } catch (error) {
-//             console.error('Error fetching accounts:', error);
-//             setIsAuthenticated(false);
-//         }
-//     }, [instance]);
-
-//     // Loading state
-//     if (isAuthenticated === null) {
-//         return (
-//             <div className="flex justify-center items-center h-screen">
-//                 <span className="loader">Loading...</span>
-//             </div>
-//         );
-//     }
-
-//     const accounts = instance.getAllAccounts();
-//     const userEmail = accounts[0]?.username;
-
-//     const allowedEmails = [
-//         'user1@sathvikreddy8685gmail.onmicrosoft.com', // Manager
-//         'user2@sathvikreddy8685gmail.onmicrosoft.com', // Worker1
-//         'user3@sathvikreddy8685gmail.onmicrosoft.com', // Worker2
-//         'user4@sathvikreddy8685gmail.onmicrosoft.com', // Worker3
-//         'user5@sathvikreddy8685gmail.onmicrosoft.com', // Worker4
-//     ];
-
-//     // Check authentication and allowed email
-//     return isAuthenticated && allowedEmails.includes(userEmail) ? <Outlet /> : <Navigate to="/login" />;
-// };
-
-// export default ProtectedRoute;
 import React, { useEffect, useState } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { useMsal } from '@azure/msal-react';

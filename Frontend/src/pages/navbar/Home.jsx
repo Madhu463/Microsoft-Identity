@@ -9,9 +9,15 @@ const Home = () => {
   };
   return (
     <>
-      {/* <header className="bg-white bg-opacity-10 backdrop-blur-lg flex items-center justify-between text-white p-4 fixed w-full z-10">
-        <h3 className="border-2 border-teal-500 text-black font-bold px-4 py-2 rounded hover:cursor-pointer hover:border-black hover:text-black transition ease-in-out duration-300">THE WHEEL FACTORY</h3>
-        
+      {/* <header className="bg-white bg-opacity-10 backdrop-blur-lg flex items-center justify-between text-white p-3 fixed w-full z-10"
+      >
+        <div className="animate-pulse flex items-center">
+          <img src="src\assets\file.png" alt="Logo" className="h-10 w-10 mr-4" />
+        </div>
+        <h3 className="text-center flex-grow font-family: 'Roboto' text-2xl font-bold text-white px-4 py-2 rounded transition ease-in-out duration-300 animate-pulse">
+          <i>The Wheel Factory</i>
+        </h3>
+        <Link to="/contact">Contact Us</Link>
         <button
           className="border-2 border-teal-500 text-white font-bold px-4 py-2 rounded hover:bg-teal-500 hover:text-black transition ease-in-out duration-300"
           onClick={loginHandler}
@@ -19,25 +25,26 @@ const Home = () => {
           LOGIN
         </button>
       </header> */}
-
-<header className="bg-white bg-opacity-10 backdrop-blur-lg flex items-center justify-between text-white p-3 fixed w-full z-10"
-
->
-    <div className="animate-pulse flex items-center">
-        <img src="src\assets\file.png" alt="Logo" className="h-10 w-10 mr-4" />
-    </div>
-    <h3 className="text-center flex-grow font-family: 'Roboto' text-2xl font-bold text-white px-4 py-2 rounded transition ease-in-out duration-300 animate-pulse">
-        <i>The Wheel Factory</i>
-    </h3>
-    <button
-        className="border-2 border-teal-500 text-white font-bold px-4 py-2 rounded hover:bg-teal-500 hover:text-black transition ease-in-out duration-300"
-        onClick={loginHandler}
-    >
-        LOGIN
-    </button>
-</header>
-
-    <div className="relative bg-gray-800 flex justify-center items-center">
+<header className="bg-white bg-opacity-10 backdrop-blur-lg flex items-center justify-between text-white p-3 fixed w-full z-10">
+        <div className="animate-pulse flex items-center">
+          <img src="src/assets/file.png" alt="Logo" className="h-10 w-10 mr-4" />
+        </div>
+        <h3 className="text-left flex-grow font-family: 'Roboto' text-2xl font-bold text-white px-4 py-2 rounded transition ease-in-out duration-300 animate-pulse">
+          <i>The Wheel Factory</i>
+        </h3>
+        <nav className="space-x-8 text-white text-l font-bold justify-center">
+          <Link to="/">Home</Link>
+          <Link to="/contact">Contact</Link>
+          {/* <Link to="/about">About Us</Link> */}
+        <button
+          className="border-2 border-teal-500 text-white font-bold px-4 py-2 rounded bg-teal-500 hover:text-black transition ease-in-out duration-300"
+          onClick={loginHandler}
+        >
+          LOGIN
+        </button>
+        </nav>
+      </header>
+      <div className="relative bg-gray-800 flex justify-center items-center">
         <Carousel
           showThumbs={false}
           infiniteLoop
@@ -132,9 +139,7 @@ const Home = () => {
         </div>
       </footer>
       <div
-        className="bg-gray-900 text-white p-4 flex justify-center font-bold"
-
-      >
+        className="bg-gray-900 text-white p-4 flex justify-center font-bold">      
         <p>&copy; 2023 The Wheel Factory. All rights reserved.</p>
       </div>
     </>

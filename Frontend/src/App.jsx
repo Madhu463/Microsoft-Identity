@@ -10,6 +10,8 @@ import ManagerDashboard from './pages/manager/Manager';
 import { Toaster } from '@/components/ui/toaster';
 import ProtectedRoute from './pages/protected/ProtectedRoute';
 import NotFound from './pages/notfound/NotFound';
+import ContactForm from './pages/navbar/Contact';
+// import AboutUs from './pages/navbar/About';
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-
+          <Route path="/contact" element={<ContactForm/>}/>
+          {/* <Route path="/about" element={<AboutUs/>}/> */}
           {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
             <Route path="/workers/:userId" element={<Worker />} />

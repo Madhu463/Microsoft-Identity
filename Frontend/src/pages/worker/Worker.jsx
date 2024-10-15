@@ -597,13 +597,13 @@ export default function Worker() {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredOrders.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(filteredOrders.length / itemsPerPage);
-  
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="overflow-x-auto bg-white shadow-md rounded-lg p-2">
       <div className="overflow-x-auto rounded-lg">
-        <header 
+        <header
           className="flex justify-between items-center p-5 text-white rounded-lg shadow-md mb-8"
           style={{
             backgroundImage: 'url("/bg-images/bag.jpg")',
@@ -624,30 +624,30 @@ export default function Worker() {
         </header>
       </div>
 
-      <h3 className="text-2xl font-semibold text-center mb-6">PENDING ORDERS LIST</h3>    
-<div className="mb-6 flex space-x-4">
-  <div className="rounded-lg px-6 py-2 flex items-center">
-    <label htmlFor="" className="mr-2 font-bold text-gray-700">OrderId:</label>
-     <input
-          type="text"
-          placeholder="Search by Order ID"
-          className="border border-gray-600 p-2 rounded-md text-gray-950 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={searchOrderId}
-          onChange={(e) => setSearchOrderId(e.target.value)}
-        />
-  <label htmlFor="filterDate" className="mr-2 ml-4 font-bold text-gray-700">Filter by Date:</label>
-    <input
-      type="date"
-      id="filterDate"
-      className="border border-gray-600 p-2  rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      value={filterDate}
-      onChange={(e) => setFilterDate(e.target.value)}
-    />
-  </div>
-  <div className="bg-purple-100 text-gray-900 font-bold rounded-lg shadow-md px-8 py-5">
-    <span className="font-bold">PendingOrders:</span> {filteredOrders.length}
-  </div>
-</div>
+      <h3 className="text-2xl font-semibold text-center mb-6">PENDING ORDERS LIST</h3>
+      <div className="mb-6 flex space-x-4">
+        <div className="rounded-lg px-6 py-2 flex items-center">
+          <label htmlFor="" className="mr-2 font-bold text-gray-700">OrderId:</label>
+          <input
+            type="text"
+            placeholder="Search by Order ID"
+            className="border border-gray-600 p-2 rounded-md text-gray-950 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={searchOrderId}
+            onChange={(e) => setSearchOrderId(e.target.value)}
+          />
+          <label htmlFor="filterDate" className="mr-2 ml-4 font-bold text-gray-700">Filter by Date:</label>
+          <input
+            type="date"
+            id="filterDate"
+            className="border border-gray-600 p-2  rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={filterDate}
+            onChange={(e) => setFilterDate(e.target.value)}
+          />
+        </div>
+        <div className="bg-purple-100 text-gray-900 font-bold rounded-lg shadow-md px-8 py-5">
+          <span className="font-bold">PendingOrders:</span> {filteredOrders.length}
+        </div>
+      </div>
 
       <div className="overflow-x-auto rounded-lg">
         <table className="min-w-full bg-white border rounded border-gray-300 shadow-md">
@@ -708,14 +708,14 @@ export default function Worker() {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70">
           <div className="bg-white p-6 rounded-md shadow-md w-1/2 max-w-2xl">
             <div className="flex space-x-4 mb-4">
-              <button 
+              <button
                 className={`px-4 py-2 rounded ${activeTab === 'inventory' ? 'bg-gray-950 text-white' : 'bg-gray-200'}`}
                 onClick={() => setActiveTab('inventory')}
               >
                 Inventory Details
               </button>
               {selectedTask?.additionalData && selectedTask.additionalData.length > 0 && (
-                <button 
+                <button
                   className={`px-4 py-2 rounded ${activeTab === 'sandblasting' ? 'bg-gray-950 text-white' : 'bg-gray-200'}`}
                   onClick={() => setActiveTab('sandblasting')}
                 >
@@ -723,7 +723,7 @@ export default function Worker() {
                 </button>
               )}
               {selectedTask?.secondData && selectedTask.secondData.length > 0 && (
-                <button 
+                <button
                   className={`px-4 py-2 rounded ${activeTab === 'painting' ? 'bg-gray-950 text-white' : 'bg-gray-200'}`}
                   onClick={() => setActiveTab('painting')}
                 >

@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { toast } from '@/hooks/use-toast'; 
+import { toast } from '@/hooks/use-toast';
 
 const Packaging = () => {
   const navigate = useNavigate();
@@ -61,14 +61,14 @@ const Packaging = () => {
       imageUrl: null,
     },
     validationSchema: Yup.object({
-    iRating: Yup.string().required('Rating is required'),
+      iRating: Yup.string().required('Rating is required'),
       notes: Yup.string().required('Notes are required'),
       imageUrl: Yup.mixed().required('Proof of Inspection (image) is required'),
     }),
     onSubmit: async (values, { resetForm }) => {
       const formData = new FormData();
       formData.append('orderId', orderDetails?.orderId);
-      formData.append('status', orderDetails?.status );
+      formData.append('status', orderDetails?.status);
       formData.append('iRating', values.iRating);
       formData.append('notes', values.notes);
       if (values.imageUrl) {
@@ -83,13 +83,15 @@ const Packaging = () => {
             Authorization: `Bearer ${token}`,
           },
         });
-        toast({ title: 'Packaging task submitted successfully' ,
-        style: {
-          backgroundColor: "#90EE90",
-          color: "black",
-          fontWeight: "bold"
-        }});
-        
+        toast({
+          title: 'Packaging task submitted successfully',
+          style: {
+            backgroundColor: "#90EE90",
+            color: "black",
+            fontWeight: "bold"
+          }
+        });
+
         resetForm();
       } catch (error) {
         console.error('Error submitting packaging task:', error);
@@ -102,17 +104,17 @@ const Packaging = () => {
 
   return (
     <div className="p-4">
-<header 
-  className="flex justify-between items-center p-8 rounded-md shadow-md mb-8"
-  style={{
-    backgroundImage: 'url("public/bg-images/bag.jpg")',
-    backgroundSize: 'cover', 
-    backgroundPosition: 'center', 
-  }}
->        <div className="flex space-x-4">
+      <header
+        className="flex justify-between items-center p-8 rounded-md shadow-md mb-8"
+        style={{
+          backgroundImage: 'url("public/bg-images/bag.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >        <div className="flex space-x-4">
           <button
             className="border border-gray-300 font-bold text-white p-2 rounded-md shadow-sm"
-            onClick={() => navigate(`/Workers/${role} `)} 
+            onClick={() => navigate(`/Workers/${role} `)}
           >
             PREVIOUS
           </button>
@@ -120,7 +122,7 @@ const Packaging = () => {
         </div>
         <button
           className="border border-red-400 p-2 rounded-md shadow-sm font-bold text-red-500"
-          onClick={() =>{localStorage.clear(); navigate('/')}}
+          onClick={() => { localStorage.clear(); navigate('/') }}
         >
           LOGOUT
         </button>
@@ -131,8 +133,8 @@ const Packaging = () => {
         <div className="md:w-1/2  p-4 bg-gray-50">
           <div className="flex items-center mb-8">
             <div className="bg-gray-300 rounded-full h-20 w-20 flex items-center justify-center text-3xl text-gray-600">
-            <img className="bg-gray-400 rounded-full h-25 w-25 flex items-center justify-center text-3xl text-gray-600"
-         src="public/bg-images/profile.jpg"/>
+              <img className="bg-gray-400 rounded-full h-25 w-25 flex items-center justify-center text-3xl text-gray-600"
+                src="public/bg-images/profile.jpg" />
             </div>
             <div className="ml-4">
               <h2 className="text-2xl font-extrabold text-gray-900">WORKER4-PACKAGING</h2>
@@ -140,18 +142,18 @@ const Packaging = () => {
             </div>
           </div>
           <div className="space-y-4">
-  <div className="">
-    <p className="text-sm uppercase text-lg text-gray-900 font-bold">Role:</p>
-    <p className="mt-1 text-md font-medium text-gray-700">Packaging Technician</p>
-  </div>
-  <div className="">
-    <p className="text-sm uppercase  text-lg text-gray-900 font-bold">ID:</p>
-    <p className="mt-1 text-md font-medium text-gray-700">Worker004</p>
-  </div>
-  <div className="">
-    <p className="text-sm uppercase text-lg text-gray-900 font-bold">Type of Work:</p>
-    <p className="mt-1 text-md font-medium text-gray-700">Full-time</p>
-  </div>
+            <div className="">
+              <p className="text-sm uppercase text-lg text-gray-900 font-bold">Role:</p>
+              <p className="mt-1 text-md font-medium text-gray-700">Packaging Technician</p>
+            </div>
+            <div className="">
+              <p className="text-sm uppercase  text-lg text-gray-900 font-bold">ID:</p>
+              <p className="mt-1 text-md font-medium text-gray-700">Worker004</p>
+            </div>
+            <div className="">
+              <p className="text-sm uppercase text-lg text-gray-900 font-bold">Type of Work:</p>
+              <p className="mt-1 text-md font-medium text-gray-700">Full-time</p>
+            </div>
           </div>
         </div>
 
@@ -183,8 +185,8 @@ const Packaging = () => {
               >
                 <option value="">select rating</option>
                 {ratingOptions.map((option) => (
-                  <option key={option.id}> {option.iRating} 
-                   
+                  <option key={option.id}> {option.iRating}
+
                   </option>
 
                 ))}
@@ -223,22 +225,22 @@ const Packaging = () => {
               )}
             </div>
             <div className="flex justify-center space-x-4 mt-4">
-            <button
-              type="submit"
-              className="border border-gray-300 font-bold text-white p-2 rounded-md shadow-sm bg-black px-4 py-2"
-            >
-              Submit
-            </button>
+              <button
+                type="submit"
+                className="border border-gray-300 font-bold text-white p-2 rounded-md shadow-sm bg-black px-4 py-2"
+              >
+                Submit
+              </button>
 
-            <button
-              type="submit"
-              className="bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-gray-600"
-              onClick={() => navigate(`/Workers/${role} `)}>
-              Cancel
-            </button>
-          </div>
+              <button
+                type="submit"
+                className="bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-gray-600"
+                onClick={() => navigate(`/Workers/${role} `)}>
+                Cancel
+              </button>
+            </div>
 
-           
+
           </form>
         </div>
       </div>
