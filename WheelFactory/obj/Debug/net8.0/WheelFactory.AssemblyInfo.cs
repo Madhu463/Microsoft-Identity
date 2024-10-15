@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WheelFactory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d70bc32defc6ee4661ab080b8ff00a7c01e23e5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+561352fd832458c9bcff83b13de112d3bb299e60")]
 [assembly: System.Reflection.AssemblyProductAttribute("WheelFactory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WheelFactory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

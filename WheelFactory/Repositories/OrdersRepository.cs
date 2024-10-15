@@ -23,22 +23,36 @@ namespace WheelFactory.Repositories
         }
         public Orders? UpdateOrder(Orders order)
         {
-            _context.OrderDetails.Update(order);
-            try
-            {
-                _context.SaveChanges();
-                return order;
-            }
-            catch
+            if(order == null)
             {
                 return null;
             }
+            var existingOrder = _context.OrderDetails.Find(order.OrderId);
+
+            if (existingOrder != null)
+            {
+                _context.Entry(existingOrder).CurrentValues.SetValues(order);
+                try
+                {
+                    _context.SaveChanges();
+                    return existingOrder;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+            return null;
         }
         public Orders? AddOrder(Orders order)
         {
-            _context.OrderDetails.Add(order);
+            if( order == null )
+            {
+                return null;
+            }
             try
             {
+                _context.OrderDetails.Add(order);
                 _context.SaveChanges();
             }
             catch (Exception ex)
@@ -48,18 +62,24 @@ namespace WheelFactory.Repositories
             }
             return order;
         }
-        public Orders DeleteOrder(Orders order)
+        public Orders? DeleteOrder(int id)
         {
-            try
+            var order = _context.OrderDetails.Find(id);
+            if(order != null)
             {
-                var deletedOrder = _context.OrderDetails.Remove(order);
-                _context.SaveChanges();
-                return order;
+                try
+                {
+                    var deletedOrder = _context.OrderDetails.Remove(order);
+                    _context.SaveChanges();
+                    return order;
+                }
+                catch
+                {
+                    return null;
+                }
             }
-            catch
-            {
-                return null;
-            }
+            return null;
+            
         }
     }
 }

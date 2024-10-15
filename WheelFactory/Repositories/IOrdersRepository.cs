@@ -7,6 +7,6 @@ namespace WheelFactory.Repositories
         IQueryable<Orders>? GetOrders();
         Orders? UpdateOrder(Orders order);
         Orders? AddOrder(Orders order);
-        Orders? DeleteOrder(Orders order);
+        Orders? DeleteOrder(int id);
     }
 }

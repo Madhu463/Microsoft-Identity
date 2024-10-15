@@ -12,14 +12,29 @@ namespace WheelFactory.Repositories
         }
         public Models.Task AddTask(Models.Task task)
         {
-            _context.Tasks.Add(task);
-            _context.SaveChanges();
+            if (task == null)
+            {
+                return null;
+            }
+            try
+            {
+                _context.Tasks.Add(task);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
             return task;
         }
 
         public Models.Task DeleteTask(int id)
         {
             var task = _context.Tasks.Find(id);
+            if(task == null)
+            {
+                return null;
+            }
             _context.Tasks.Remove(task);
             _context.SaveChanges();
             return task;
@@ -33,12 +48,19 @@ namespace WheelFactory.Repositories
         public Models.Task UpdateTask(int id, Models.Task task)
         {
             var currentTask = _context.Tasks.Find(id);
-            if (currentTask == null)
+            if (currentTask == null || task == null)
             {
-                throw new KeyNotFoundException($"Task with ID {id} not found");
+                return null;
             }
-            currentTask = task;
-            _context.SaveChanges();
+            try
+            {
+                _context.Entry(currentTask).CurrentValues.SetValues(task);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                return null;
+            }
             return currentTask;
         }
     }

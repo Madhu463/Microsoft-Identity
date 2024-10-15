@@ -47,13 +47,7 @@ namespace WheelFactory.Services
 
         public Orders? DeleteOrder(int id)
         {
-            Orders? orderById = GetOrders(id: id).FirstOrDefault<Orders>();
-
-            if (orderById == null)
-            {
-                return null;
-            }
-            return _repo.DeleteOrder(orderById);
+            return _repo.DeleteOrder(id);
         }
 
         public IQueryable<Orders> GetOrders(int? id = null, string? status = null)
