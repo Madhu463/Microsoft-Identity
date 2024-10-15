@@ -8,18 +8,18 @@ namespace WheelFactory.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
 
     public class OrdersController : ControllerBase
     {
-        private readonly string _basePath = @"C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory\wwwroot\images\";
-        private readonly IOrdersService _order;
+        private readonly string _basePath = @"C:\Users\ksathvikreddy\Desktop\Projects\Microsoft-Identity\WheelFactory\wwwroot\images\";
         private readonly WheelContext _wheelContext;
-
+        private readonly IOrdersService _ordersService;
         public OrdersController(WheelContext wc, IOrdersService orderService)
         {
-            _order = orderService;
+            _ordersService = orderService;
             _wheelContext = wc;
+
         }
 
         [HttpGet("{id}")]
@@ -27,7 +27,11 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                var order = _order.GetById(id);
+                var order = _ordersService.GetOrders(id: id).FirstOrDefault<Orders>();
+                if (order == null)
+                {
+                    return NotFound();
+                }
                
                 return Ok(order);
             }
@@ -42,7 +46,7 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                var orders = _order.GetOrders();
+                var orders = _ordersService.GetOrders().ToList<Orders>();
         
                 return Ok(orders);
             }
@@ -57,7 +61,7 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                var orders = _order.GetCurrent();
+                var orders = _ordersService.GetOrders().Where<Orders>(o => (o.Status != "completed" && o.Status != "Scrap")).ToList();
                
                 return Ok(orders);
             }
@@ -72,7 +76,7 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                var orders = _order.GetComplete();
+                var orders = _ordersService.GetOrders(status: "completed").ToList<Orders>();
                
                 return Ok(orders);
             }
@@ -87,8 +91,8 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                var orders = _order.GetScraped();
-               
+                var orders = _ordersService.GetOrders(status: "Scrap").ToList<Orders>();
+
                 return Ok(orders);
             }
             catch (Exception ex)
@@ -102,37 +106,39 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                if (value.ImageUrl == null || value.ImageUrl.Length == 0)
-                    return BadRequest("No file uploaded.");
+                //if (value.ImageUrl == null || value.ImageUrl.Length == 0)
+                //    return BadRequest("No file uploaded.");
 
-                var originalFileName = Path.GetFileName(value.ImageUrl.FileName);
-                var filePath = Path.Combine(_basePath, originalFileName);
+                //var originalFileName = Path.GetFileName(value.ImageUrl.FileName);
+                //var filePath = Path.Combine(_basePath, originalFileName);
 
-                if (!Directory.Exists(_basePath))
+                //if (!Directory.Exists(_basePath))
+                //{
+                //    Directory.CreateDirectory(_basePath);
+                //}
+
+                //using (var stream = new FileStream(filePath, FileMode.Create))
+                //{
+                //    await value.ImageUrl.CopyToAsync(stream);
+                //}
+
+                //var order = new Orders
+                //{
+                //    ClientName = value.ClientName,
+                //    Year = (int)value.Year,
+                //    Make = value.Make,
+                //    Model = value.Model,
+                //    Notes = value.Notes,
+                //    Status = "neworder",
+                //    DamageType = value.DamageType,
+                //    ImageUrl = "http://localhost:5041/images/" + originalFileName
+                //};
+
+                var newOrder = _ordersService.AddOrder(value);
+
+                if (newOrder != null)
                 {
-                    Directory.CreateDirectory(_basePath);
-                }
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await value.ImageUrl.CopyToAsync(stream);
-                }
-
-                var order = new Orders
-                {
-                    ClientName = value.ClientName,
-                    Year = value.Year,
-                    Make = value.Make,
-                    Model = value.Model,
-                    Notes = value.Notes,
-                    Status = "neworder",
-                    DamageType = value.DamageType,
-                    ImageUrl = "http://localhost:5041/images/" + originalFileName
-                };
-
-                if (_order.AddOrders(order))
-                {
-                    return Ok(order);
+                    return Ok(newOrder);
                 }
 
                 return BadRequest("Failed to add the order.");
@@ -143,36 +149,37 @@ namespace WheelFactory.Controllers
             }
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromForm] OrderDTO value)
-        {
-            try
-            {
-                if (value == null || string.IsNullOrEmpty(value.Status))
-                {
-                    return BadRequest("Invalid order data provided.");
-                }
+        //[HttpPut("{id}")]
+        //public IActionResult Put(int id, [FromForm] OrderDTO value)
+        //{
+        //    try
+        //    {
+        //        if (value == null || string.IsNullOrEmpty(value.Status))
+        //        {
+        //            return BadRequest("Invalid order data provided.");
+        //        }
 
-                var isUpdated = _order.UpdateOrder(id, value.Status);
-                if (isUpdated)
-                {
-                    return Ok($"Order with ID {id} updated successfully.");
-                }
+        //        var updatedOrder = _ordersService.UpdateOrder(id, value);
+        //        if (updatedOrder != null)
+        //        {
+        //            return Ok(updatedOrder);
+        //        }
 
-                return BadRequest($"Order with ID {id} not found or update failed.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
-        }
+        //        return BadRequest($"Order with ID {id} not found or update failed.");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal server error: {ex.Message}");
+        //    }
+        //}
 
         [HttpPut("scrap/{id}")]
         public IActionResult PutScrapOrder(int id)
         {
             try
             {
-                if (_order.ScrapOrder(id))
+                var updatedOrder = _ordersService.UpdateOrder(id, status: "Scrap");
+                if (updatedOrder != null)
                 {
                     return Ok($"Scraped order {id}");
                 }
@@ -189,7 +196,7 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                var orders = _order.GetInventOrders();
+                var orders = _ordersService.GetOrders(status: "neworder");
                
                 return Ok(orders);
             }
@@ -204,7 +211,8 @@ namespace WheelFactory.Controllers
         {
             try
             {
-                if (_order.UpdateInventOrder(id))
+                var updatedOrder = _ordersService.UpdateOrder(id, status: "Soldering");
+                if (updatedOrder != null)
                 {
                     return Ok("Status changed to Soldering");
                 }

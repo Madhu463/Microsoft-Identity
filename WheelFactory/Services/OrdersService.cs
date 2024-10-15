@@ -1,188 +1,105 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using WheelFactory.Models;
+using WheelFactory.Repositories;
 
 namespace WheelFactory.Services
 {
     public class OrdersService : IOrdersService
     {
-        private readonly WheelContext _context;
+        private readonly IOrdersRepository _repo;
+        private readonly string _basePath = @"C:\Users\ksathvikreddy\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory\wwwroot\images\";
 
-        public OrdersService(WheelContext context)
+        public OrdersService(IOrdersRepository repo)
         {
-            _context = context;
+            _repo = repo;
+        }
+        public Orders? AddOrder(OrderDTO order)
+        {
+            if (order.ImageUrl == null || order.ImageUrl.Length == 0)
+                return null;
+
+            var originalFileName = Path.GetFileName(order.ImageUrl.FileName);
+            var filePath = Path.Combine(_basePath, originalFileName);
+
+            if (!Directory.Exists(_basePath))
+            {
+                Directory.CreateDirectory(_basePath);
+            }
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                order.ImageUrl.CopyTo(stream);
+            }
+            Orders newOrder = new Orders
+            {
+                ClientName = order.ClientName,
+                Year = (int)order.Year,
+                Model = order.Model,
+                Make = order.Make,
+                DamageType = order.DamageType,
+                ImageUrl = "http://localhost:5041/images/" + originalFileName,
+                Notes = order.Notes,
+                Status = order.Status
+            };
+            return _repo.AddOrder(newOrder);
         }
 
-        public List<Orders> GetOrders()
+        public Orders? DeleteOrder(int id)
         {
-            try
-            {
-                return _context.OrderDetails.ToList();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error fetching orders", ex);
-            }
+            return _repo.DeleteOrder(id);
         }
 
-        public Orders GetById(int id)
+        public IQueryable<Orders> GetOrders(int? id = null, string? status = null)
         {
-            try
+            IQueryable<Orders> orders;
+            if(id != null)
             {
-                var order = _context.OrderDetails.Find(id);
-                if (order == null)
-                {
-                    throw new KeyNotFoundException($"Order with ID {id} not found");
-                }
-                return order;
+                orders = _repo.GetOrders().Where<Orders>(o=>o.OrderId == id).AsQueryable<Orders>();
             }
-            catch (Exception ex)
+            else
             {
-                throw new Exception("Error fetching order by ID", ex);
+                orders = _repo.GetOrders().AsQueryable<Orders>();
             }
+            if(status != null)
+            {
+                orders = orders.Where<Orders>(o=>o.Status == status);
+            }
+            return orders;
         }
 
-        public List<Orders> GetComplete()
+        public Orders? UpdateOrder(int id, OrderDTO order)
         {
-            try
+            Orders? orderById =  GetOrders(id: id).FirstOrDefault<Orders>();
+
+            if (orderById == null)
             {
-                return _context.OrderDetails.Where(o => o.Status == "completed").ToList();
+                return null;
             }
-            catch (Exception ex)
+            Orders newOrder = new Orders
             {
-                throw new Exception("Error fetching completed orders", ex);
-            }
+                OrderId = id,
+                ClientName = order.ClientName,
+                Year = (int)order.Year,
+                Model = order.Model,
+                DamageType = order.DamageType,
+                ImageUrl = orderById.ImageUrl,
+                Notes = order.Notes,
+                Status = order.Status,
+                CreatedAt = orderById.CreatedAt,
+            };
+            return _repo.UpdateOrder(newOrder);
         }
 
-        public List<Orders> GetCurrent()
+        public Orders? UpdateOrder(int id, string status)
         {
-            try
+            Orders? orderById = GetOrders(id: id).FirstOrDefault<Orders>();
+            if (orderById == null)
             {
-                return _context.OrderDetails.Where(o =>( o.Status != "completed" && o.Status!="Scrap")).ToList();
+                return null;
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error fetching current orders", ex);
-            }
-        }
-
-        public List<Orders> GetScraped()
-        {
-            try
-            {
-                return _context.OrderDetails.Where(o => o.Status == "Scrap").ToList();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error fetching scraped orders", ex);
-            }
-        }
-
-        public bool AddOrders(Orders order)
-        {
-            try
-            {
-                _context.OrderDetails.Add(order);
-                _context.SaveChanges();
-                return true;
-            }
-            catch (DbUpdateException dbEx)
-            {
-                throw new Exception("Error adding new order to the database", dbEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error adding order", ex);
-            }
-        }
-
-        public bool UpdateOrder(int id, string status)
-        {
-            try
-            {
-                var order = _context.OrderDetails.Find(id);
-                if (order == null)
-                {
-                    throw new KeyNotFoundException($"Order with ID {id} not found");
-                }
-
-                order.Status = status;
-                _context.SaveChanges();
-
-                return true;
-            }
-            catch (DbUpdateException dbEx)
-            {
-                throw new Exception("Error updating order in the database", dbEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error updating order", ex);
-            }
-        }
-
-        public bool ScrapOrder(int id)
-        {
-            try
-            {
-                var order = _context.OrderDetails.Find(id);
-                if (order == null)
-                {
-                    return false;
-                }
-
-                order.Status = "Scrap";
-                _context.SaveChanges();
-                return true;
-            }
-            catch (DbUpdateException dbEx)
-            {
-                throw new Exception("Error marking order as scrap in the database", dbEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error scrapping order", ex);
-            }
-        }
-
-        public bool UpdateInventOrder(int id)
-        {
-            try
-            {
-                var order = _context.OrderDetails.Find(id);
-                if (order == null)
-                {
-                    throw new KeyNotFoundException($"Order with ID {id} not found");
-                }
-
-                order.Status = "Soldering";
-                _context.SaveChanges();
-                return true;
-            }
-            catch (DbUpdateException dbEx)
-            {
-                throw new Exception("Error updating order status to 'Soldering'", dbEx);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error updating inventory order", ex);
-            }
-        }
-
-        public List<Orders> GetInventOrders()
-        {
-            try
-            {
-                return _context.OrderDetails.Where(o => o.Status == "neworder").ToList();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error fetching inventory orders", ex);
-            }
+            orderById.Status = status;
+            return _repo.UpdateOrder(orderById);
         }
     }
 }
-

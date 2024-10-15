@@ -17,10 +17,10 @@ namespace WheelFactory.Controllers
     {
         private readonly string _basePath = @"C:\Users\tmadhushalini\Desktop\WheelFactory\Wheel-Factory\Backend\WheelFactory\wwwroot\images\";
         private readonly ITaskService _task;
-        private readonly IOrdersService _orders;
+        private readonly IOrderService _orders;
         private readonly WheelContext _wc;
 
-        public TaskController(WheelContext wc, ITaskService ts, IOrdersService os)
+        public TaskController(WheelContext wc, ITaskService ts, IOrderService os)
         {
             _wc = wc;
             _task = ts;

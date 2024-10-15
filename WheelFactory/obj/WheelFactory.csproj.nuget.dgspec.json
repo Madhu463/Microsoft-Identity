@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tmadhushalini\\Desktop\\WheelFactory\\Wheel-Factory\\Backend\\WheelFactory\\WheelFactory.csproj": {}
+    "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\WheelFactory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tmadhushalini\\Desktop\\WheelFactory\\Wheel-Factory\\Backend\\WheelFactory\\WheelFactory.csproj": {
+    "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\WheelFactory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tmadhushalini\\Desktop\\WheelFactory\\Wheel-Factory\\Backend\\WheelFactory\\WheelFactory.csproj",
+        "projectUniqueName": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\WheelFactory.csproj",
         "projectName": "WheelFactory",
-        "projectPath": "C:\\Users\\tmadhushalini\\Desktop\\WheelFactory\\Wheel-Factory\\Backend\\WheelFactory\\WheelFactory.csproj",
-        "packagesPath": "C:\\Users\\tmadhushalini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tmadhushalini\\Desktop\\WheelFactory\\Wheel-Factory\\Backend\\WheelFactory\\obj\\",
+        "projectPath": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\WheelFactory.csproj",
+        "packagesPath": "C:\\Users\\ksathvikreddy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tmadhushalini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ksathvikreddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

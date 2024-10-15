@@ -10,9 +10,9 @@ namespace WheelFactory.Services
     public class TaskService : ITaskService
     {
         private readonly WheelContext _context;
-        private readonly IOrdersService _orders;
+        private readonly IOrderService _orders;
 
-        public TaskService(WheelContext context, IOrdersService service)
+        public TaskService(WheelContext context, IOrderService service)
         {
             _context = context;
             _orders = service;

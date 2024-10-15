@@ -4,15 +4,10 @@ namespace WheelFactory.Services
 {
     public interface IOrdersService
     {
-        bool AddOrders(Orders order);
-        Orders GetById(int id);
-        List<Orders> GetComplete();
-        List<Orders> GetCurrent();
-        List<Orders> GetInventOrders();
-        List<Orders> GetOrders();
-        List<Orders> GetScraped();
-        bool ScrapOrder(int id);
-        bool UpdateInventOrder(int id);
-        bool UpdateOrder(int id, string status);
+        IQueryable<Orders> GetOrders(int? id = null, string? status = null);
+        Orders? UpdateOrder(int id, OrderDTO order);
+        Orders? DeleteOrder(int id);
+        Orders? AddOrder(OrderDTO order);
+        Orders? UpdateOrder(int id, string status);
     }
 }

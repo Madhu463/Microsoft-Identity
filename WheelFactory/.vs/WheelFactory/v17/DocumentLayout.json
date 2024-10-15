@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\services\\ordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:services\\ordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\repositories\\ordersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:repositories\\ordersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\services\\iordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:services\\iordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\models\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:models\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\repositories\\iordersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:repositories\\iordersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\models\\wheelcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:models\\wheelcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\repositories\\itasksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:repositories\\itasksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|c:\\users\\ksathvikreddy\\desktop\\projects\\microsoft-identity\\wheelfactory\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D89A0F40-4AD5-4B01-A546-ABC5936A8755}|WheelFactory.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Repositories\\OrdersRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\OrdersRepository.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Repositories\\OrdersRepository.cs",
+              "RelativeToolTip": "Repositories\\OrdersRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T05:18:06.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrdersService.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\IOrdersService.cs",
+              "RelativeDocumentMoniker": "Services\\IOrdersService.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\IOrdersService.cs",
+              "RelativeToolTip": "Services\\IOrdersService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T04:22:33.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAArwK4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:42:23.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersService.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\OrdersService.cs",
+              "RelativeDocumentMoniker": "Services\\OrdersService.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\OrdersService.cs",
+              "RelativeToolTip": "Services\\OrdersService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:46:25.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Services\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\IOrderService.cs",
+              "RelativeToolTip": "Services\\IOrderService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T04:56:34.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Services\\OrderService.cs",
+              "RelativeToolTip": "Services\\OrderService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwEsAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T04:56:42.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwDEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T04:58:43.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Orders.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Models\\Orders.cs",
+              "RelativeDocumentMoniker": "Models\\Orders.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Models\\Orders.cs",
+              "RelativeToolTip": "Models\\Orders.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T05:26:33.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Models\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "Models\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Models\\OrderDTO.cs",
+              "RelativeToolTip": "Models\\OrderDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T08:42:42.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IOrdersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Repositories\\IOrdersRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IOrdersRepository.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Repositories\\IOrdersRepository.cs",
+              "RelativeToolTip": "Repositories\\IOrdersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T05:59:48.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WheelContext.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Models\\WheelContext.cs",
+              "RelativeDocumentMoniker": "Models\\WheelContext.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Models\\WheelContext.cs",
+              "RelativeToolTip": "Models\\WheelContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:22:40.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITasksRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Repositories\\ITasksRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ITasksRepository.cs",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\Repositories\\ITasksRepository.cs",
+              "RelativeToolTip": "Repositories\\ITasksRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T06:03:19.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ksathvikreddy\\Desktop\\Projects\\Microsoft-Identity\\WheelFactory\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-14T04:52:08.333Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
