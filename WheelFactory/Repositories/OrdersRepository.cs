@@ -10,16 +10,29 @@ namespace WheelFactory.Repositories
         {
             _context = context;
         }
-        public IQueryable<Orders> GetOrders()
+        public IQueryable<Orders>? GetOrders()
         {
-            return _context.OrderDetails.AsQueryable<Orders>();
+            try
+            {
+                return _context.OrderDetails.AsQueryable<Orders>();
+            }
+            catch
+            {
+                return null;
+            }
         }
-        public Orders UpdateOrder(Orders order)
+        public Orders? UpdateOrder(Orders order)
         {
             _context.OrderDetails.Update(order);
-            _context.SaveChanges();
-            _context.Entry<Orders>(order).State = EntityState.Detached;
-            return order;
+            try
+            {
+                _context.SaveChanges();
+                return order;
+            }
+            catch
+            {
+                return null;
+            }
         }
         public Orders? AddOrder(Orders order)
         {
@@ -35,12 +48,18 @@ namespace WheelFactory.Repositories
             }
             return order;
         }
-        public Orders DeleteOrder(int id)
+        public Orders DeleteOrder(Orders order)
         {
-            var order = _context.OrderDetails.Find(id);
-            _context.OrderDetails.Remove(order);
-            _context.SaveChanges();
-            return order;
+            try
+            {
+                var deletedOrder = _context.OrderDetails.Remove(order);
+                _context.SaveChanges();
+                return order;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }
