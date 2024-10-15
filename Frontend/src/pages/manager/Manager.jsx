@@ -25,10 +25,6 @@ const ManagerDashboard = () => {
   ]);
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [scrappedOrders, setScrappedOrders] = useState(null);
-  const [showImage, setShowImage] = useState(false);
-  const [showSandBlastingImage, setShowSandBlastingImage] = useState(false);
-  const [showPaintingImage, setShowPaintingImage] = useState(false);
-  const [showPackagingImage, setShowPackagingImage] = useState(false);
   const [currentTab, setCurrentTab] = useState('orderDetails');
 
   const menuItems = [
@@ -437,7 +433,7 @@ const ManagerDashboard = () => {
           ))}
         </nav>
         <br />
-        <img className="mt-10 invert-0 "src="public/bg-images/bg3.webp"/>
+        <img className="mt-10 invert-0 " src="public/bg-images/bg3.webp" />
       </div>
 
       <main className="flex-1 overflow-x-hidden overflow-y-auto rounded bg-gray-300">
@@ -840,8 +836,8 @@ const ManagerDashboard = () => {
                     </div>
                     <div>
 
-</div>
-</div>
+                    </div>
+                  </div>
                   {/* Buttons between the sections */}
                   <div className="mt-6 col-span-2 flex justify-center space-x-4">
                     <button

@@ -15,16 +15,16 @@
 // //       "userId": userId,
 // //       "password": password
 // //     };
-  
+
 // //     try {
 // //       const response = await axios.post('http://localhost:5233/api/LoginUsers/validate', reqbody);
-  
+
 // //       if (response.status === 200) {
 // //         const { status, token, role } = response.data;
 // //         localStorage.setItem('status', status);
 // //         localStorage.setItem('token', token);
 // //         localStorage.setItem('role', role);
-  
+
 // //         if (role === "Manager") {
 // //           navigate('/manager'); // Redirect to manager dashboard
 // //         } else {
@@ -42,7 +42,7 @@
 // //       toast({ title: 'Invalid Credentials', variant:  "destructive" });
 // //     }
 // //   };
-  
+
 
 // //   return (
 // //     <div className="relative bg-gray-600 flex h-screen w-full items-center justify-center bg-gradient-to-r">
@@ -107,10 +107,111 @@
 
 // // export default Login;
 
+// import React from 'react';
+// import { useMsal } from '@azure/msal-react';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// const Login = () => {
+//     const { instance } = useMsal();
+//     const navigate = useNavigate();
+
+//     const handleLogin = async () => {
+//         const loginRequest = {
+//             scopes: ["email User.Read profile openid"],
+//         };
+
+//         instance.loginPopup(loginRequest)
+//         .then(async response => {
+//             const userEmail = response.account.username;
+
+//             // Retrieve the access token
+//             const tokenResponse = await instance.acquireTokenSilent({
+//                 scopes: ["api://95b1f998-ee4c-4af5-bdba-bc028bb89fbf/User.Read"],
+//                 account: response.account,
+//             });
+
+//             const accessToken = tokenResponse.accessToken;
+//             console.log(accessToken)
+//             // Now you can use the access token for your requests
+//             axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+//             localStorage.setItem('token', accessToken);
+
+//                 // Define your user type map
+//                 const userIdToWorkerTypeMap = {
+//                     'user2@sathvikreddy8685gmail.onmicrosoft.com': 'Worker1',
+//                     'user3@sathvikreddy8685gmail.onmicrosoft.com': 'Worker2',
+//                     'user4@sathvikreddy8685gmail.onmicrosoft.com': 'Worker3',
+//                     'user5@sathvikreddy8685gmail.onmicrosoft.com': 'Worker4',
+//                     'user1@sathvikreddy8685gmail.onmicrosoft.com': 'manager', 
+//                 };
+
+//                 const userType = userIdToWorkerTypeMap[userEmail];
+//                 console.log('Navigating to:', userType ? `/workers/${userType}` : '/manager');
+
+//                 if (userType) {
+//                   // Navigate based on the user type
+//                   if (userType === 'manager') {
+//                       navigate('/manager');
+//                   } else if (userType === 'Worker1') {
+//                       navigate('/workers/Worker1');
+//                   } else if (userType === 'Worker2') {
+//                       navigate('/workers/Worker2');
+//                   } else if (userType === 'Worker3') {
+//                       navigate('/workers/Worker3');
+//                   } else if (userType === 'Worker4') {
+//                       navigate('/workers/Worker4');
+//                   } else {
+//                       // Handle unexpected user types
+//                       alert("Unexpected user type.");
+//                   }
+//                 } else {
+//                     // Handle unauthorized users
+//                     alert("You do not have access to this application.");
+//                 }
+//             })
+//             .catch(err => {
+//                 console.error(err);
+//                 alert("Login failed.");
+//             });
+//     };
+
+//     return (
+
+//             <div className="relative bg-gray-600 flex h-screen w-full items-center justify-center bg-gradient-to-r">
+//               <img src="/bg-images/bglogin5.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover" />
+//               <div className="relative backdrop-blur-3xl rounded-lg shadow-lg p-8 w-full max-w-[800px] h-auto md:h-[450px] bg-cover bg-center">
+//                 <div className="flex h-full items-center justify-center rounded-lg text-white shadow-lg md:flex-row">
+//                   <div className="relative hidden md:block w-1/4 overflow-hidden rounded-l-lg">
+//                     <img
+//                       src="/bg-images/logins5.jpg"
+//                       alt="Login illustration"
+//                       className="object-cover invert w-full h-full"
+//                       style={{ aspectRatio: '350/450', objectFit: 'cover' }}
+//                     />
+//                   </div>
+//                   <div className="flex w-full md:w-1/2 flex-col justify-center gap-6 p-8 md:p-12">
+//                     <div className="space-y-2 border text-white rounded-md p-2">
+//                       <h1 className="text-3xl font-bold">Welcome User!</h1>
+//                       <p className="text-muted-foreground text-white">Enter your credentials to access your account.</p>
+//                     </div>
+//                     <button 
+//                     onClick={handleLogin}
+//                    className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-500 transition duration-300"
+//                 >                   Login with Microsoft              </button> 
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//     );
+// };
+
+// export default Login;
+
 import React from 'react';
 import { useMsal } from '@azure/msal-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
 const Login = () => {
     const { instance } = useMsal();
     const navigate = useNavigate();
@@ -120,53 +221,44 @@ const Login = () => {
             scopes: ["email User.Read profile openid"],
         };
 
-        // instance.loginPopup(loginRequest)
-        //     .then(response => {
-        //         const userEmail = response.account.username;
         instance.loginPopup(loginRequest)
-        .then(async response => {
-            const userEmail = response.account.username;
+            .then(async response => {
+                const idTokenClaims = response.idTokenClaims; // Extract ID token claims
+                const userRoles = idTokenClaims.roles || []; // Get roles or default to an empty array
 
-            // Retrieve the access token
-            const tokenResponse = await instance.acquireTokenSilent({
-                scopes: ["api://95b1f998-ee4c-4af5-bdba-bc028bb89fbf/User.Read"],
-                account: response.account,
-            });
+                // Use the first role (or implement your own logic for multiple roles)
+                const userType = userRoles.length > 0 ? userRoles[0] : null;
 
-            const accessToken = tokenResponse.accessToken;
-            console.log(accessToken)
-            // Now you can use the access token for your requests
-            axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
-            localStorage.setItem('token', accessToken);
+                // Retrieve the access token
+                const tokenResponse = await instance.acquireTokenSilent({
+                    scopes: ["api://95b1f998-ee4c-4af5-bdba-bc028bb89fbf/User.Read"],
+                    account: response.account,
+                });
 
-                // Define your user type map
-                const userIdToWorkerTypeMap = {
-                    'user2@sathvikreddy8685gmail.onmicrosoft.com': 'Worker1',
-                    'user3@sathvikreddy8685gmail.onmicrosoft.com': 'Worker2',
-                    'user4@sathvikreddy8685gmail.onmicrosoft.com': 'Worker3',
-                    'user5@sathvikreddy8685gmail.onmicrosoft.com': 'Worker4',
-                    'user1@sathvikreddy8685gmail.onmicrosoft.com': 'manager', // Manager's email
-                };
+                const accessToken = tokenResponse.accessToken;
+                console.log(accessToken);
 
-                const userType = userIdToWorkerTypeMap[userEmail];
+                // Set the authorization header for axios
+                axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+                localStorage.setItem('token', accessToken);
+
                 console.log('Navigating to:', userType ? `/workers/${userType}` : '/manager');
 
                 if (userType) {
-                  // Navigate based on the user type
-                  if (userType === 'manager') {
-                      navigate('/manager');
-                  } else if (userType === 'Worker1') {
-                      navigate('/workers/Worker1');
-                  } else if (userType === 'Worker2') {
-                      navigate('/workers/Worker2');
-                  } else if (userType === 'Worker3') {
-                      navigate('/workers/Worker3');
-                  } else if (userType === 'Worker4') {
-                      navigate('/workers/Worker4');
-                  } else {
-                      // Handle unexpected user types
-                      alert("Unexpected user type.");
-                  }
+                    // Navigate based on the user type
+                    if (userType === 'Manager') {
+                        navigate('/manager');
+                    } else if (userType === 'Worker1') {
+                        navigate('/workers/Worker1');
+                    } else if (userType === 'Worker2') {
+                        navigate('/workers/Worker2');
+                    } else if (userType === 'Worker3') {
+                        navigate('/workers/Worker3');
+                    } else if (userType === 'Worker4') {
+                        navigate('/workers/Worker4');
+                    } else {
+                        alert("Unexpected user type.");
+                    }
                 } else {
                     // Handle unauthorized users
                     alert("You do not have access to this application.");
@@ -179,109 +271,34 @@ const Login = () => {
     };
 
     return (
-     
-            <div className="relative bg-gray-600 flex h-screen w-full items-center justify-center bg-gradient-to-r">
-              <img src="/bg-images/bglogin5.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="relative backdrop-blur-3xl rounded-lg shadow-lg p-8 w-full max-w-[800px] h-auto md:h-[450px] bg-cover bg-center">
+        <div className="relative bg-gray-600 flex h-screen w-full items-center justify-center bg-gradient-to-r">
+            <img src="/bg-images/bglogin5.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="relative backdrop-blur-3xl rounded-lg shadow-lg p-8 w-full max-w-[800px] h-auto md:h-[450px] bg-cover bg-center">
                 <div className="flex h-full items-center justify-center rounded-lg text-white shadow-lg md:flex-row">
-                  <div className="relative hidden md:block w-1/4 overflow-hidden rounded-l-lg">
-                    <img
-                      src="/bg-images/logins5.jpg"
-                      alt="Login illustration"
-                      className="object-cover invert w-full h-full"
-                      style={{ aspectRatio: '350/450', objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className="flex w-full md:w-1/2 flex-col justify-center gap-6 p-8 md:p-12">
-                    <div className="space-y-2 border text-white rounded-md p-2">
-                      <h1 className="text-3xl font-bold">Welcome User!</h1>
-                      <p className="text-muted-foreground text-white">Enter your credentials to access your account.</p>
+                    <div className="relative hidden md:block w-1/4 overflow-hidden rounded-l-lg">
+                        <img
+                            src="/bg-images/logins5.jpg"
+                            alt="Login illustration"
+                            className="object-cover invert w-full h-full"
+                            style={{ aspectRatio: '350/450', objectFit: 'cover' }}
+                        />
                     </div>
-                    <button 
-                    onClick={handleLogin}
-                   className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-500 transition duration-300"
-                >                   Login with Microsoft              </button> 
-                  </div>
+                    <div className="flex w-full md:w-1/2 flex-col justify-center gap-6 p-8 md:p-12">
+                        <div className="space-y-2 border text-white rounded-md p-2">
+                            <h1 className="text-3xl font-bold">Welcome User!</h1>
+                            <p className="text-muted-foreground text-white">Enter your credentials to access your account.</p>
+                        </div>
+                        <button
+                            onClick={handleLogin}
+                            className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-500 transition duration-300"
+                        >
+                            Login with Microsoft
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
+        </div>
     );
 };
 
 export default Login;
-// import React from 'react';
-// import { useMsal } from '@azure/msal-react';
-// import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
-
-// const Login = () => {
-//     const { instance } = useMsal();
-//     const navigate = useNavigate();
-
-//     const handleLogin = async () => {
-//         const loginRequest = {
-//             scopes: ["email User.Read profile openid"],
-//         };
-
-//         instance.loginPopup(loginRequest)
-//             .then(async response => {
-//                 const accessToken = await instance.acquireTokenSilent({
-//                     scopes: ["api://95b1f998-ee4c-4af5-bdba-bc028bb89fbf/User.Read"],
-//                     account: response.account,
-//                 });
-
-//                 // Set the Authorization header for axios
-//                 axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken.accessToken}`;
-//                 localStorage.setItem('token', accessToken);
-
-//                 const userEmail = response.account.username;
-
-//                 // Define your user type map
-//                 const userIdToWorkerTypeMap = {
-//                     'user2@sathvikreddy8685gmail.onmicrosoft.com': 'Worker1',
-//                     'user3@sathvikreddy8685gmail.onmicrosoft.com': 'Worker2',
-//                     'user4@sathvikreddy8685gmail.onmicrosoft.com': 'Worker3',
-//                     'user5@sathvikreddy8685gmail.onmicrosoft.com': 'Worker4',
-//                     'user1@sathvikreddy8685gmail.onmicrosoft.com': 'manager', // Manager's email
-//                 };
-
-//                 const userType = userIdToWorkerTypeMap[userEmail];
-
-//                 // Navigate based on the user type
-//                 if (userType === 'manager') {
-//                     navigate('/manager');
-//                 } else if (userType) {
-//                     navigate(`/workers/${userType}`);
-//                 } else {
-//                     alert("You do not have access to this application.");
-//                 }
-//             })
-//             .catch(err => {
-//                 console.error(err);
-//                 alert("Login failed.");
-//             });
-//     };
-
-//     return (
-//         <div className="relative bg-gray-600 flex h-screen w-full items-center justify-center bg-gradient-to-r">
-//             <img 
-//                 src="/bg-images/bglogin5.jpg" 
-//                 alt="Background" 
-//                 className="absolute inset-0 w-full h-full object-cover" 
-//             />
-//             <div className="relative backdrop-blur-3xl rounded-lg shadow-lg p-8 w-full max-w-sm h-auto bg-white bg-opacity-70">
-//                 <h2 className="text-3xl font-bold text-center mb-4">Welcome!</h2>
-//                 <p className="text-center mb-6">Please log in using your Microsoft account.</p>
-//                 <button 
-//                     onClick={handleLogin}
-//                     className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-500 transition duration-300"
-//                 >
-//                     Login with Microsoft
-//                 </button>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Login;
-
